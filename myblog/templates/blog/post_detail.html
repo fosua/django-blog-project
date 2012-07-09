@@ -1,0 +1,20 @@
+{% extends "blog/base.html" %}
+{% block content %}
+<h3> POST</h3>
+<h3>  {{post_detail.title}}</h3> 
+<ul>
+<li>Date Created: {{ post_detail.date_created}}</li>
+<li>Date Updated: {{ post_detail.date_updated}}</li>
+<li>body: {{ post_detail.body}}</li>
+</ul>
+<h3> COMMENTS</h3>
+{% for c in comment %}
+<ul>
+<li> author: {{ c}}</li>
+<li> date created: {{ c.date_created }}</li>
+<li> date updated: {{ c.date_updated }}</li>
+<li> body: {{ c.body }}</li>
+</ul>
+{% endfor %}
+{% endblock %}
+  

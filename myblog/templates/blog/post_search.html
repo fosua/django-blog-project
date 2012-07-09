@@ -1,0 +1,7 @@
+{% extends "blog/base.html" %}
+{% block content %}
+{% for search in results %}
+<h3><a href= "/blog/posts/{{search.id}}/true"> {{search.title}} </a></h3>
+
+{% endfor %}
+{% endblock %}

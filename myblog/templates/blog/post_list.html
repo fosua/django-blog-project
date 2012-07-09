@@ -1,0 +1,14 @@
+{% extends "blog/base.html" %}
+{% block content%}
+{% for post in post_list %}
+    <h3> <a href = "/blog/posts/{{post.id}}/true">{{ post.title }}</a></h3>
+    <ul>
+    <li>Created: {{ post.date_created }}</li>
+    <li> Last updated: {{ post.date_updated }}</li>
+    <li>body: {{ post.body|slice:":60"}} </li>
+    </ul>
+{% endfor %}
+{% endblock %}
+
+    
+
