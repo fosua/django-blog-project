@@ -9,6 +9,8 @@ class Post(models.Model):
 	date_updated = models.DateField(auto_now = True)
 	def __unicode__(self):
 		return self.title
+	"""def get_absolute_url(self):
+                return "/blog/posts/%i/true" %self.ID"""
 class Comment(models.Model):
 	body = models.TextField()
 	author = models.CharField(max_length= 60)
