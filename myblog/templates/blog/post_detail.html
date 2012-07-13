@@ -14,7 +14,17 @@
 <li> date created: {{ c.date_created }}</li>
 <li> date updated: {{ c.date_updated }}</li>
 <li> body: {{ c.body }}</li>
+<div><a href = "/blog/comments/{{ c.id}}/edit"> Edit Comment </a>
+</div>
 </ul>
+
 {% endfor %}
+<h3> New comment: </h3>
+<div>
+<form method = 'post' action = "">
+{{ form.as_p }}
+<input type = 'submit' name = 'Submit'>
+</form>
+</div>
 {% endblock %}
   
